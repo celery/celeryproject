@@ -1,0 +1,42 @@
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'celeryproject',                      # Or path to database file if using sqlite3.
+        'USER': 'root',                      # Not used with sqlite3.
+        'PASSWORD': 'mauro',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+ADMINS = (
+    ('Mauro Rocco', 'sample@email.com'),
+)
+
+MANAGERS = ADMINS
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+#########################################################################
+# Import settings from settings_base.py, if it exists.
+
+try:
+  from celeryproject import settings_base
+except ImportError:
+    pass
+else:
+  # Import any symbols that begin with A-Z. Append to lists any symbols that
+  # begin with "EXTRA_".
+  import re
+  for attr in dir(settings_base):
+    match = re.search('^EXTRA_(\w+)', attr)
+    if match:
+      name = match.group(1)
+      value = getattr(settings_base, attr)
+      try:
+        globals()[name] += value
+      except KeyError:
+        globals()[name] = value
+    elif re.search('^[A-Z]', attr):
+      globals()[attr] = getattr(settings_base, attr)

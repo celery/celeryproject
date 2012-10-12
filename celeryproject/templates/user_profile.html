@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+{%block title%}{{ user.username }}'s Profile{%endblock%}
+{% block content %}
+{% autoescape off %}
+  <div>
+  {% load thumbnail %}
+  {% thumbnail user.get_profile.image "100x100" crop="center" as im %}
+      <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+  {% endthumbnail %}
+    <div style="display:inline-block;margin: 10px">
+      <h1>{{ user.username }}'s Profile</h1>
+      <a href="{{ user.get_profile.homepage }}">{{ user.get_profile.homepage }}</a>
+    </div>
+  </div>
+  {% include "common/share.html" %}
+  {{ user.get_profile.description|default_if_none:"" }}</br>
+  {% if user.get_profile.twitter %}
+    <h3>Twitter</h3><a href="https://twitter.com/{{ user.get_profile.twitter }}">{{ user.get_profile.twitter }}</a>
+  {% endif %}
+  {% if user.get_profile.github %}
+    <h3>Github </h3><a href="https://github.com/{{ user.get_profile.github }}">{{ user.get_profile.github }}</a>
+  {% endif %}
+{% endautoescape %}
+{% endblock %}
