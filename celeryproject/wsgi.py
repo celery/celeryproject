@@ -15,9 +15,9 @@ framework.
 """
 import os, sys
 
-sys.path.append('/siti/www.celeryproject.org/celeryproject')
+sys.path.append('/siti/www.celeryproject.org')
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "celeryproject.settings")
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
