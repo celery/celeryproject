@@ -16,6 +16,7 @@ framework.
 import os, sys
 
 sys.path.append('/siti/www.celeryproject.org')
+sys.path.append('/siti/www.celeryproject.org/celeryproject')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "celeryproject.settings")
 
