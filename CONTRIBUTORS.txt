@@ -1,0 +1,14 @@
+Everyone who have ever contributed to CeleryProject website should be in
+this list, everyone must add themselves
+
+Contributor offers to license certain software (a “Contribution” or multiple
+“Contributions”) to CeleryProject website, and Celery agrees to accept said Contributions,
+under the terms of the BSD open source license.
+Contributor understands and agrees that Celery shall have the irrevocable and perpetual right to make
+and distribute copies of any Contribution, as well as to create and distribute collective works and
+derivative works of any Contribution, under the BSD License.
+
+Contributors
+------------
+
+Mauro Rocco, 2012/10/16
