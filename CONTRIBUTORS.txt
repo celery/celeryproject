@@ -12,3 +12,4 @@ Contributors
 ------------
 
 Mauro Rocco, 2012/10/16
+Andrea Rossi, 2012/10/16
