@@ -1,3 +1,5 @@
+from celeryproject.settings_base import *
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
@@ -24,26 +26,3 @@ MANAGERS = ADMINS
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
-#########################################################################
-# Import settings from settings_base.py, if it exists.
-
-try:
-  from celeryproject import settings_base
-except ImportError:
-    pass
-else:
-  # Import any symbols that begin with A-Z. Append to lists any symbols that
-  # begin with "EXTRA_".
-  import re
-  for attr in dir(settings_base):
-    match = re.search('^EXTRA_(\w+)', attr)
-    if match:
-      name = match.group(1)
-      value = getattr(settings_base, attr)
-      try:
-        globals()[name] += value
-      except KeyError:
-        globals()[name] = value
-    elif re.search('^[A-Z]', attr):
-      globals()[attr] = getattr(settings_base, attr)
