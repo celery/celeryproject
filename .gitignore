@@ -1,6 +1,7 @@
 *.log
 *.pot
 *.pyc
-settings.py
 *.sqlite
 .idea
+dev.py
+production.py

@@ -1,7 +1,5 @@
 # Django settings for celeryproject project.
 import os
-import sys
-import django.conf.global_settings as DEFAULT_SETTINGS
 
 PROJECT_ROOT = os.path.dirname(__file__)
 
