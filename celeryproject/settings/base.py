@@ -3,6 +3,15 @@ import os
 
 PROJECT_ROOT = os.path.dirname(__file__)
 
+ADMINS = (
+    ('Mauro Rocco', 'fireantology@gmail.com'),
+)
+
+MANAGERS = ADMINS
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -63,7 +72,6 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -73,7 +81,6 @@ SECRET_KEY = 'vkr!-(b^(jb@_t5a#6#i_-bupin-@xkc7#_zl2wwi52zayvqhc'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (

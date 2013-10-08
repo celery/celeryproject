@@ -1,0 +1,687 @@
+[
+  {
+    "pk": 2, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Documentation and support", 
+      "url": "/docs-and-support/", 
+      "template_name": "", 
+      "sites": [
+        1
+      ], 
+      "content": "<p>The latest documentation with user guides, tutorials and API reference</p>\r\n<p><a href=\"http://docs.celeryproject.org/en/latest/index.html\" target=\"_blank\">Latest stable docs</a> &nbsp;&nbsp;     <a href=\"http://celery.github.com/celery/index.html\" target=\"_blank\">Development docs</a></p>\r\n<h3>Getting Help</h3>\r\n<p><strong>Mailing list</strong></p>\r\n<p>For discussions about the usage, development, and future of celery, \t\tplease join the <a href=\"http://groups.google.com/group/celery-users/\" target=\"_blank\">celery-users</a> mailing list.</p>\r\n<p><strong>IRC</strong></p>\r\n<p>Come chat with us on IRC. The <a target=\"_blank\">#celery</a> channel is located at the <a href=\"http://freenode.net\" target=\"_blank\">Freenode</a> network.</p>\r\n<h3>Bug tracker</h3>\r\n<p>If you have any suggestions, bug reports or annoyances please report them \t\tto our issue tracker at <a href=\"http://github.com/celery/celery/issues/\" target=\"_blank\">http://github.com/celery/celery/issues/</a></p>\r\n<h3>Wiki</h3>\r\n<p><a href=\"https://github.com/celery/celery/wiki/\" target=\"_blank\">https://github.com/celery/celery/wiki/</a></p>\r\n<h3>Contributing</h3>\r\n<p>Development of celery happens at Github: <a href=\"http://github.com/celery/celery\" target=\"_blank\">http://github.com/celery/celery</a></p>\r\n<p>You are highly encouraged to participate in the development \t\tof celery. If you don't like Github (for some reason) you're welcome \t\tto send regular patches.</p>\r\n<p>Be sure to also read the <a href=\"http://celery.github.com/celery/contributing.html\" target=\"_blank\">Contributing to Celery</a> section in the \t\tdocumentation.</p>", 
+      "enable_comments": false
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "flatpages.flatpage", 
+    "fields": {
+      "registration_required": false, 
+      "title": "Download and Install", 
+      "url": "/install/", 
+      "template_name": "flatpages/syntax_highlight.html", 
+      "sites": [
+        1
+      ], 
+      "content": "<p>You can install Celery either via the Python Package Index (PyPI)  \t\tor from source.</p>\r\n<p>To install using pip:</p>\r\n<pre class=\"brush: bash; toolbar: false;\">\t\t$ pip install Celery</pre>\r\n<p>To install using easy_install,:</p>\r\n<pre class=\"brush: bash; toolbar: false;\">\t\t$ easy_install Celery</pre>\r\n<h3>Downloading and installing from source</h3>\r\n<p>Download the latest version of Celery from  \t\t<a href=\"http://pypi.python.org/pypi/celery/\" target=\"_blank\">http://pypi.python.org/pypi/celery/</a></p>\r\n<p>You can install it by doing the following,:</p>\r\n<pre class=\"brush: bash; toolbar: false;\">\t\t$ tar xvfz celery-0.0.0.tar.gz\r\n\r\n\t\t$ cd celery-0.0.0\r\n\r\n\t\t$ python setup.py build\r\n\r\n\t\t# python setup.py install # as root</pre>\r\n<h3>Using the development version</h3>\r\n<p>You can clone the repository by doing the following:</p>\r\n<pre class=\"brush: bash; toolbar: false;\">\t\t$ git clone git://github.com/celery/celery.git</pre>", 
+      "enable_comments": false
+    }
+  },
+  {
+    "pk": 2, 
+    "model": "celeryweb.extendedflatpage", 
+    "fields": {
+      "menu_label": "Docs and Support", 
+      "sites": [
+        1
+      ]
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "celeryweb.extendedflatpage", 
+    "fields": {
+      "menu_label": "Install", 
+      "sites": [
+        1
+      ]
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "celeryweb.contenttype", 
+    "fields": {
+      "name": "Slides"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "celeryweb.contenttype", 
+    "fields": {
+      "name": "Article"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "celeryweb.contenttype", 
+    "fields": {
+      "name": "PDF"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "celeryweb.contenttype", 
+    "fields": {
+      "name": "Video"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "celeryweb.contenttype", 
+    "fields": {
+      "name": "Library"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "celeryweb.contenttype", 
+    "fields": {
+      "name": "Application"
+    }
+  },
+  {
+    "pk": 150, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "catmaid.org", 
+      "title": "Installation of the Celery task queue", 
+      "url": "http://www.catmaid.org/celeryinstall.html", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:46:52Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 151, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "David Markey", 
+      "title": "Killing Celery child processes on a timeout", 
+      "url": "http://dmarkey.com/wordpress/2011/09/07/killing-child-processes-of-celery-tasks-on-a-timeout/", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:47:14Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 152, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "LFS", 
+      "title": "How to use Celery with Lightning Fast Shop (LFS)", 
+      "url": "http://docs.getlfs.com/en/latest/user/howtos/how_to_use_celery.html", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:47:38Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 153, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "django-better-cache", 
+      "title": "Using Celery with django-better-cache", 
+      "url": "http://django-better-cache.readthedocs.org/en/latest/middleware.html", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:48:03Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 154, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "django-better-cache", 
+      "title": "Using Celery with django-better-cache", 
+      "url": "http://django-better-cache.readthedocs.org/en/latest/middleware.html", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:48:03Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 155, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Roger Hu", 
+      "title": "How the celeryctl command works", 
+      "url": "http://hustoknow.blogspot.co.uk/2011/11/how-celeryctl-command-works-in-celery.html", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:48:29Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 156, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Roger Hu", 
+      "title": "How Celery & Kombu interfaces with RabbitMQ", 
+      "url": "http://hustoknow.blogspot.co.uk/2011/08/how-scheduled-tasks-and-celery-and.html", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:48:53Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 157, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Nicholas Kuechler", 
+      "title": "Auto-scale Rackspace Cloud servers with Fabric and Celery", 
+      "url": "http://nicholaskuechler.com/2012/06/19/auto-scale-rackspace-cloud-servers-with-fabric-and-celery/", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:49:12Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 158, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Bryan Helmig", 
+      "title": "Large Django Migrations with Celery", 
+      "url": "http://bryanhelmig.com/large-django-migrations-utilizing-celery/", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:49:32Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 159, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Bryan Helmig", 
+      "title": "Why Task Queues in Python, Ruby and More!", 
+      "url": "http://www.slideshare.net/bryanhelmig/task-queues-comorichweb-12962619", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:49:57Z", 
+      "visible": true, 
+      "content_type": 1, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 160, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Randall Degges", 
+      "title": "Deploying Django", 
+      "url": "http://rdegges.com/deploying-django", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:50:33Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 161, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Arturo Jamaica", 
+      "title": "DJCelery Integraci\u00f3n con el admin Panel", 
+      "url": "http://www.youtube.com/watch?v=B2ynDMFvfKc", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:50:58Z", 
+      "visible": true, 
+      "content_type": 4, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 162, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Arturo Jamaica", 
+      "title": "Crawler en Celery, Python y Django", 
+      "url": "http://www.youtube.com/watch?v=Ua9jae8gOOI", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:51:21Z", 
+      "visible": true, 
+      "content_type": 4, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 163, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "inTime Labs", 
+      "title": "Creating a nested (chained) queue in Celery", 
+      "url": "http://blog.intimelabs.com/post/28255481589/creating-a-nested-chained-queue-in-celery", 
+      "creator": "asksol", 
+      "creation_date": "2012-07-29T22:51:43Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 164, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Amit Kumar Saha", 
+      "title": "Celery + Python logging: problems and solutions", 
+      "url": "http://echorand.me/2012/08/14/celery-and-python-logging/", 
+      "creator": "asksol", 
+      "creation_date": "2012-08-17T14:18:29Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 165, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "The Wild Wild Stack", 
+      "title": "Django, ZeroMQ and Celery: multiprocessing gotcha", 
+      "url": "http://dickbrouwer.com/post/32405801335/django-zeromq-and-celery-multiprocessing-gotcha", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T11:54:53Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 166, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "David Gouldin", 
+      "title": "Using Celery with Social Networks", 
+      "url": "http://www.youtube.com/watch?v=ApUntHaO_P8", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T11:55:15Z", 
+      "visible": true, 
+      "content_type": 4, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 167, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Piyush Kumar & Konark Modi", 
+      "title": "Celery for background task processing (Pycon India 2012)", 
+      "url": "http://www.slideshare.net/piykumar/pycon-india-2012", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T11:56:13Z", 
+      "visible": true, 
+      "content_type": 1, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 168, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Abd Allah Diab", 
+      "title": "Python Celery Asynchronous Task Decorator", 
+      "url": "http://mpcabd.igeex.biz/python-celery-asynchronous-task-decorator/", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T11:57:04Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 169, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Mahendra M", 
+      "title": "Advanced Task Management in Celery (PyCon India 2012)", 
+      "url": "http://www.slideshare.net/mahendram/advanced-task-management-with-celery", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T11:57:51Z", 
+      "visible": true, 
+      "content_type": 1, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 170, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Timothee Peignier", 
+      "title": "Instax - Making Celery monitoring easier", 
+      "url": "http://pypi.python.org/pypi/instax/", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T11:58:51Z", 
+      "visible": true, 
+      "content_type": 5, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 171, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Dr. Chuck", 
+      "title": "Installing Stanford\u2019s Class2Go Large-Scale Open Teaching Environment", 
+      "url": "http://www.dr-chuck.com/csev-blog/2012/10/installing-stanfords-open-source-class2go-large-scale-open-teaching-environment/", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T12:00:36Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 172, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Thierry Schellenbach", 
+      "title": "Open graph and timeline sharing using Django Facebook", 
+      "url": "http://www.mellowmorning.com/2012/10/03/open-graph-and-timeline-sharing-using-django-facebook/", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T12:01:20Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 173, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Nick Lang", 
+      "title": "Scheduling Tasks Using Celery and Django ", 
+      "url": "https://nick.treadhub.com/2012/oct/11/scheduled-tasks-using-celery-and-django/", 
+      "creator": "asksol", 
+      "creation_date": "2012-10-15T12:04:55Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 174, 
+    "model": "celeryweb.communitylink", 
+    "fields": {
+      "author": "Supercoderz", 
+      "title": "Understanding the new messaging frameworks with virtual backends [Kombu]", 
+      "url": "http://supercoderz.in/2012/11/03/understanding-the-new-messaging-frameworks-with-virtual-backends/", 
+      "creator": "asksol", 
+      "creation_date": "2012-11-05T11:27:56Z", 
+      "visible": true, 
+      "content_type": 2, 
+      "last_edited_by": "asksol"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 1.0 released!", 
+      "text": "<p>Celery 1.0 has finally been released! It is available on <a href=\"http://pypi.python.org/pypi/celery/1.0.0\" target=\"_blank\">PyPI</a> for       downloading. You can also install it via <code>pip install           Celery</code>. You can read the announcement <a href=\"http://celeryproject.org/celery_1.0_released.html\" target=\"_blank\">here</a>.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:10Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-10-released"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 1.0.1 realeased!", 
+      "text": "<p>This is a bugfix release and has some important changes to the       shutdown procedure. Also improved compatibility with Windows and Python       2.4. Read the full <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a> for more information. Download from <a href=\"http://pypi.python.org/pypi/celery/1.0.1\" target=\"_blank\">PyPI</a>,       or simply install the upgrade using <code>pip install -U Celery</code>.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:11Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-101-realeased"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 1.0.3 released!", 
+      "text": "<p>This release contains a drastic improvement in reliability and       performance. Please read the full <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a> before you upgrade. Download from <a href=\"http://pypi.python.org/pypi/celery/1.0.3\" target=\"_blank\">PyPI</a>,       or simply install the upgrade using <code>pip install -U Celery</code>.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:12Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-103-released"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 1.0.5 released!", 
+      "text": "<p>This release contains some important bug fixes related to shutdown and       broker connection loss, as well as some other minor fixes. Also       AbortableTask has been added to contrib. Please read the full <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a> before you upgrade. Download from <a href=\"http://pypi.python.org/pypi/celery/1.0.5\" target=\"_blank\">PyPI</a>,       or simply install the upgrade using <code>pip install -U Celery</code>.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:13Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-105-released"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 1.0.6 released!", 
+      "text": "<p>RabbitMQ 1.8.0 came with stricter equivalence checks that broke the       AMQP result backend, this release resolves this. If you've already used       the AMQP backend you need to delete the previous declarations. For       instructions please read the full       <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a>.       Download from <a href=\"http://pypi.python.org/pypi/celery/1.0.6\" target=\"_blank\">PyPI</a>,       or simply install the upgrade using <code>pip install -U Celery==1.0.6</code>.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:14Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-106-released"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.0 released!", 
+      "text": "<p>We're proud to announce the release of Celery 2.0. This version replaces       the Django ORM with SQLAlchemy as the database result store. With this, Celery no       longer depends on Django. Django integration is now available as a separate package       called <a href=\"http://pypi.python.org/pypi/django-celery\" target=\"_blank\">django-celery</a>.</p>\r\n<p>In addition there are a lot of new features: a curses monitor, time       limits, complex crontab expressions, callbacks, simplified routing,       and more. Everything is detailed in the <a href=\"http://docs.celeryproject.org/en/latest/changelog.html#id1\" target=\"_blank\">Changelog</a>,       so be sure to read it before upgrading.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:15Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-20-released"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.1 released!", 
+      "text": "<p>This new version is now available at PyPI.  Be sure to read the       <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a> before upgrading.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:16Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-21-released"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.1.1 bugfix release!", 
+      "text": "<p>All users are urged to upgrade.  For a list of changes see the       <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a>.</p>\r\n<p>Users of Django must also upgrade to       <a href=\"http://pypi.python.org/pypi/django-celery\" target=\"_blank\">django-celery 2.1.1</a>.</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:17Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-211-bugfix-release"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.2 released!", 
+      "text": "<p>A great number of new features, including Jython, eventlet and gevent       support.  Everything is detailed in the       <a href=\"http://docs.celeryproject.org/en/latest/changelog.html\" target=\"_blank\">Changelog</a>, which       you should have read before upgrading.</p>\r\n<p>&nbsp;</p>\r\n<p>Users of Django must also upgrade to       <a href=\"http://pypi.python.org/pypi/django-celery\" target=\"_blank\">django-celery 2.2</a>.</p>\r\n<p>This release would not have       been possible without the help of contributors and users, so       thank you, and congratulations!</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:18Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-22-released"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.3 released!", 
+      "text": "<p>After several delays, 2.3 is finally here!</p>\r\n<p>This release contains automatic connection pool support (not enabled by default), chords (aka taskset callbacks), custom time limits for individual tasks, and more.</p>\r\n<p>Results are now disabled by default, if you depend on the amqp result backend being the default,&nbsp;then you have to configure that manually before upgrading.</p>\r\n<p>Everything is detailed in the&nbsp;<a href=\"http://docs.celeryproject.org/en/latest/changelog.html#version-2-3-0\" target=\"_blank\">Changelog</a>, which you should have read <em>before</em> upgrading.</p>\r\n<p>Users of Django must also upgrade to&nbsp;<a href=\"http://pypi.python.org/pypi/django-celery/2.3\" target=\"_blank\">django-celery 2.3</a>.</p>\r\n<p>Big thanks to all contributors and users!</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:19Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-23-released"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.4 released!", 
+      "text": "<p>This release contains Python 3 support, broker urls, less dependencies, and loads of bug fixes.&nbsp;</p>\r\n<p>Everything is detailed in the<a href=\"http://docs.celeryproject.org/en/latest/changelog.html#version-2-4-0\" target=\"_blank\">&nbsp;Changelog</a>, which you should read&nbsp;<em>before</em>&nbsp;upgrading.</p>\r\n<p>Users of Django must also upgrade to <a href=\"http://pypi.python.org/pypi/django-celery/\" target=\"_blank\">django-celery 2.4</a>, which also adds South migrations (see</p>\r\n<p><a href=\"http://packages.python.org/django-celery/changelog.html#version-2-4-0\" target=\"_blank\">the django-celery changelog</a>)</p>\r\n<p>&nbsp;</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:20Z", 
+      "visible": true, 
+      "last_edited_by": "asksol", 
+      "slug": "celery-24-released"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 2.5 released!", 
+      "text": "<p>Read all about it in the <a href=\"http://docs.celeryproject.org/en/latest/whatsnew-2.5.html\" target=\"_blank\">What's New</a> guide!</p>", 
+      "creator": "asksol", 
+      "creation_date": "2011-06-11T13:17:21Z", 
+      "visible": true, 
+      "last_edited_by": "asksol", 
+      "slug": "celery-25-released"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "celeryweb.news", 
+    "fields": {
+      "title": "Celery 3.0 released!", 
+      "text": "<p>New API, loads of features, go see the new <a href=\"http://docs.celeryproject.org/en/latest/getting-started/introduction.html\" target=\"_blank\">introduction</a>, or go directly to see&nbsp;<a href=\"http://docs.celeryproject.org/en/latest/whatsnew-3.0.html\" target=\"_blank\">What's New&nbsp;in 3.0</a></p>", 
+      "creator": "asksol", 
+      "creation_date": "2012-06-07T17:17:21Z", 
+      "visible": true, 
+      "last_edited_by": "fireantology", 
+      "slug": "celery-30-released"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "celeryweb.tutorial", 
+    "fields": {
+      "language": "en", 
+      "title": "First steps with Celery", 
+      "creator": "asksol", 
+      "creation_date": "2012-09-05T13:21:05Z", 
+      "content": "<div id=\"creating-a-simple-task\" class=\"section\"><span></span>\r\n<h2>See the <a href=\"http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html\" target=\"_blank\">First Steps With Celery</a> tutorial:</h2>\r\n<p>&nbsp;<a href=\"http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html\" target=\"_blank\">http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html</a></p>\r\n</div>", 
+      "visible": true, 
+      "attachment": "", 
+      "content_type": 2, 
+      "last_edited_by": "asksol", 
+      "slug": "first-steps-with-celery"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "auth.user", 
+    "fields": {
+      "username": "fireantology", 
+      "first_name": "", 
+      "last_name": "", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2013-01-17T13:47:10Z", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "dummy",
+      "email": "sample@sample.com",
+      "date_joined": "2011-06-11T18:24:48Z"
+    }
+  }, 
+  {
+    "pk": 3,
+    "model": "auth.user", 
+    "fields": {
+      "username": "asksol", 
+      "first_name": "Ask", 
+      "last_name": "Solem", 
+      "is_active": true, 
+      "is_superuser": true, 
+      "is_staff": true, 
+      "last_login": "2012-11-05T11:26:31Z", 
+      "groups": [], 
+      "user_permissions": [], 
+      "password": "dummy",
+      "email": "sample@sample.com",
+      "date_joined": "2011-06-11T20:12:14Z"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "celeryweb.userprofile", 
+    "fields": {
+      "twitter": "fireantology", 
+      "github": "fireantology", 
+      "homepage": "http://www.toforge.com/", 
+      "description": "", 
+      "image": "imgs/profiles/profile.jpg"
+    }
+  }, 
+  {
+    "pk": 3,
+    "model": "celeryweb.userprofile", 
+    "fields": {
+      "twitter": "asksol", 
+      "github": "ask", 
+      "homepage": "", 
+      "description": "", 
+      "image": "imgs/profiles/asksolem.jpeg"
+    }
+  }
+]

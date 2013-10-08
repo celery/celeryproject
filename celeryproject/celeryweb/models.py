@@ -21,12 +21,14 @@ class TrackingModel(models.Model):
 
     class Meta:
         abstract = True
-        
+
+
 class ExtendedFlatPage(FlatPage):
     menu_label = models.CharField(verbose_name=_("_menu_label"),
                                   max_length=255,
                                   blank=False,
                                   default="")
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User,
@@ -52,74 +54,74 @@ class UserProfile(models.Model):
     class Meta:
         verbose_name = _("_user_profile")
         verbose_name_plural = _("_user_profiles")
-        
+
     def __unicode__(self):
-        return "%s" % self.user.username    
+        return "%s" % self.user.username
 
 
 class ContentType(models.Model):
     name = models.CharField(verbose_name=_("_name"),
                             max_length=255)
-    
+
     class Meta:
         verbose_name = _("_content_type")
         verbose_name_plural = _("_content_types")
-        
+
     def __unicode__(self):
-        return "%s" % self.name 
+        return "%s" % self.name
 
 
 class CommunityLink(TrackingModel):
-    title = models.CharField(verbose_name=_("_title"), 
+    title = models.CharField(verbose_name=_("_title"),
                              max_length=255)
     url = models.URLField(verbose_name=_("_url"))
-    author = models.CharField(verbose_name=_("_author"), 
+    author = models.CharField(verbose_name=_("_author"),
                               max_length=255)
     content_type = models.ForeignKey(ContentType,
                                      verbose_name=_("_content_type"))
-     
+
     class Meta:
         verbose_name = _("_community_link")
         verbose_name_plural = _("_community_links")
-        
+
     def __unicode__(self):
-        return "%s - %s " % (self.title,self.url)
+        return "%s - %s " % (self.title, self.url)
 
 
 class News(TrackingModel):
     slug = models.SlugField(verbose_name=_("_slug"), unique=True)
     title = models.CharField(verbose_name=_("_title"), max_length=255)
     text = models.TextField(verbose_name=_("_text"))
-    
+
     class Meta:
         verbose_name = _("_news")
         verbose_name_plural = _("_news")
-        
+
     def __unicode__(self):
         return "%s" % (self.title)
-    
+
     def permalink(self):
         return "/news/%s/" % self.slug
 
 
 class Tutorial(TrackingModel):
     title = models.CharField(verbose_name=_("_title"), max_length=255)
-    slug = models.SlugField(verbose_name=_("_slug"),unique=True)
+    slug = models.SlugField(verbose_name=_("_slug"), unique=True)
     content = models.TextField(verbose_name=_("_content"))
-    content_type = models.ForeignKey(ContentType, 
+    content_type = models.ForeignKey(ContentType,
                                      verbose_name=_("_content_type"))
     language = models.CharField(choices=settings.LANGUAGES, max_length=8)
     attachment = models.FileField(upload_to="uploads/tutorial/",
                                   verbose_name=_("_attachment"),
                                   blank=True,
                                   null=True)
-    
+
     class Meta:
         verbose_name = _("_tutorial")
         verbose_name_plural = _("_tutorials")
-        
+
     def __unicode__(self):
         return "%s" % (self.title)
-    
+
     def permalink(self):
         return "/tutorials/%s/" % self.slug
