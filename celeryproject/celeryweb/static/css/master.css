@@ -334,3 +334,53 @@ ul.small_list li {
     float: right;
     width: 220px;
 }
+
+/* Testimonial stile */
+
+.quote_box{
+    width: 280px;
+    float: left;
+    margin: 10px 15px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.quote_box img{
+    float: left;
+    width: 80px;
+    margin-top: 40px;
+}
+
+.quote_box .blockquote_container{
+    float: left;
+    width: 200px;
+}
+
+blockquote {
+    font: italic 1.2em serif;
+    color: #666;
+    margin: 0px;
+}
+blockquote:before, blockquote:after {
+    display: block;
+    font-size: 300%;
+    color: #ccc;
+}
+blockquote:before {
+    content: open-quote;
+    margin-left: -97%;
+    height: 20px;
+    margin-top: 15px;
+}
+blockquote:after {
+    content: close-quote;
+    margin-left: 97%;
+    height: 20px;
+    margin-top: -15px;
+}
+
+cite {
+  font-size: 0.9em;
+  color: #666;
+  float: right;
+}

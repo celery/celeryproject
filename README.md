@@ -6,9 +6,6 @@ The official Celery Project website
 #### Required Django apps ####
 - sorl-thumbnail
 
-#### Extra python packages ####
-- python-memcached
-
 ### How to run celeryproject in local ###
 
 The project contains a requirements.txt file, so it's enough that you create a virtual env and you install the requirements using pip
