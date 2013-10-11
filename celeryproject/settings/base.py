@@ -1,7 +1,7 @@
 # Django settings for celeryproject project.
-import os
+from os.path import abspath, dirname, join, normpath
 
-PROJECT_ROOT = os.path.dirname(__file__)
+PROJECT_ROOT = dirname(dirname(abspath(__file__)))
 
 ADMINS = (
     ('Mauro Rocco', 'fireantology@gmail.com'),
@@ -35,14 +35,14 @@ USE_I18N = True
 # calendars according to the current locale.
 USE_L10N = True
 
-LOCALE_PATHS = (os.path.join(PROJECT_ROOT, 'celeryproject/celeryweb/locale'))
+LOCALE_PATHS = (join(PROJECT_ROOT, 'celeryproject/celeryweb/locale'))
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_ROOT = normpath(join(PROJECT_ROOT, 'media'))
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -53,7 +53,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = normpath(join(PROJECT_ROOT, 'static'))
 
 
 # URL prefix for static files.
@@ -105,7 +105,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, '../templates'),
+    join(PROJECT_ROOT, 'templates'),
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (

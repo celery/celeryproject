@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from django.conf import settings
 from sorl.thumbnail import ImageField
@@ -49,7 +50,7 @@ class UserProfile(models.Model):
                               blank=True,
                               null=True)
     image = ImageField(verbose_name=_("_profile_image"),
-                       upload_to='imgs/profiles')
+                       upload_to=os.path.join(settings.MEDIA_ROOT, 'img/profiles'))
 
     class Meta:
         verbose_name = _("_user_profile")
