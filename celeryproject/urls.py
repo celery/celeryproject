@@ -15,6 +15,9 @@ urlpatterns = patterns('celeryweb.views',
                        url(r'^ajax/stackoverflowquestions/(?P<page_size>[0-9]+)/(?P<page>[0-9]+)/$',
                            'stackoverflow_questions',
                            name='stackoverflow_questions'),
+                       url(r'^ajax/packageinfo/$',
+                           'package_info',
+                           name='package_info'),
 
                        #ADMIN
                        url(r'^admin/', include(admin.site.urls)),

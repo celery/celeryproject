@@ -2,6 +2,7 @@ import urllib2
 import StringIO
 import gzip
 import json
+from django.core.cache import cache
 from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import render_to_response, get_object_or_404
@@ -11,7 +12,7 @@ from .models import News, Tutorial, CommunityLink
 
 
 def home(request):
-    latest_news = News.objects.filter(visible=1).order_by("-creation_date")[:1]
+    latest_news = News.objects.filter(visible=1).order_by("-creation_date")[:2]
     context = {'latest_news': latest_news, }
     return render_to_response("index.html", context,
                               context_instance=RequestContext(request))
@@ -80,6 +81,15 @@ def community(request):
                               context_instance=RequestContext(request))
 
 
+def user_profile(request, username):
+    user = get_object_or_404(User, username=username)
+    return render_to_response('user_profile.html',
+                              {'user': user},
+                              context_instance=RequestContext(request))
+
+#AJAX
+
+
 def stackoverflow_questions(request, page_size=10, page=1):
     opener = urllib2.build_opener()
     request_url = urllib2.Request(("http://api.stackoverflow.com/1.1/"
@@ -96,8 +106,20 @@ def stackoverflow_questions(request, page_size=10, page=1):
                               context_instance=RequestContext(request))
 
 
-def user_profile(request, username):
-    user = get_object_or_404(User, username=username)
-    return render_to_response('user_profile.html',
-                              {'user': user},
+def package_info(request):
+    package_info_context = cache.get('package_info_context', None)
+    if not package_info_context:
+        opener = urllib2.build_opener()
+        request_url = urllib2.Request("http://pypi.python.org/pypi/celery/json", None)
+        package_info_context = {}
+        try:
+            package_info_context['package_info'] = json.load(opener.open(request_url))
+            package_info_context['changelog_link'] = "http://docs.celeryproject.org/en/latest/changelog.html#version-%s"\
+                                        % package_info_context['package_info']['info']['version'].replace(".", "-")
+            cache.set('package_info_context', package_info_context, 60 * 120)
+        except (urllib2.HTTPError, ValueError) as e:
+            package_info_context['error'] = "Something went wrong when trying to get package information from pypi"
+
+    return render_to_response('ajax/celery_package_info.html',
+                              package_info_context,
                               context_instance=RequestContext(request))
