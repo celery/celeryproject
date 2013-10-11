@@ -241,12 +241,21 @@ ul.small_list li {
     padding:  20px 0;
 }
 
-#footer #credits {
+#footer #hosting {
     display: inline-block;
     width:  390px;
     margin:  0 0 0 10px;
     vertical-align: top;
     font-size: 11px;
+}
+
+#footer #credits {
+    display: block;
+    width: 100%;
+    margin:  10px 0 0 0;
+    vertical-align: top;
+    font-size: 11px;
+    text-align: center;
 }
 
 #footer #donate {
