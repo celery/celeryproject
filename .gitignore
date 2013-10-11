@@ -5,4 +5,4 @@
 .idea
 dev.py
 production.py
-celeryproject/media
+media

@@ -5,7 +5,7 @@ from django.conf.urls.defaults import patterns, include, url
 
 admin.autodiscover()
 
-urlpatterns = patterns('celeryproject.celeryweb.views',
+urlpatterns = patterns('celeryweb.views',
                        url(r'^news/(?P<slug>[\w-]*)', 'news', name='news'),
                        url(r'^tutorials/(?P<slug>[\w-]*)', 'tutorials', name='tutorials'),
                        url(r'^community/', 'community', name='external_resources'),

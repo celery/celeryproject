@@ -1,7 +1,7 @@
 # Django settings for celeryproject project.
 from os.path import abspath, dirname, join, normpath
 
-PROJECT_ROOT = dirname(dirname(abspath(__file__)))
+PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
 
 ADMINS = (
     ('Mauro Rocco', 'fireantology@gmail.com'),
@@ -35,7 +35,7 @@ USE_I18N = True
 # calendars according to the current locale.
 USE_L10N = True
 
-LOCALE_PATHS = (join(PROJECT_ROOT, 'celeryproject/celeryweb/locale'))
+LOCALE_PATHS = (join(PROJECT_ROOT, 'celeryweb/locale'))
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
@@ -110,7 +110,7 @@ TEMPLATE_DIRS = (
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
-    "celeryproject.celeryweb.custom_context_processors.ext_flatpages",
+    "celeryweb.custom_context_processors.ext_flatpages",
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
@@ -129,7 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.flatpages',
     'sorl.thumbnail',
-    'celeryproject.celeryweb',
+    'celeryweb',
 )
 
 # A sample logging configuration. The only tangible logging
