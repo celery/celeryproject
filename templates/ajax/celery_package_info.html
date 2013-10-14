@@ -1,0 +1,20 @@
+{% load humanize %}
+{% if error %}
+    {{ error }}
+{% else %}
+    <div id="version_info">
+        <h3>Current Version</h3>
+        <p>
+            {{ package_info.info.version }}<br/>
+            <a href="{{ changelog_link }}" target="_blank">Open changelog </a>
+        </p>
+    </div>
+    <div id="stats">
+        <h3>Downloads</h3>
+        <p>
+            Last month: <b>{{ package_info.info.downloads.last_month|intcomma }}</b><br/>
+            Last week: <b>{{ package_info.info.downloads.last_week|intcomma }}</b><br/>
+            Last day: <b>{{ package_info.info.downloads.last_day|intcomma }}</b>
+        </p>
+    </div>
+{% endif %}

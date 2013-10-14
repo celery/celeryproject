@@ -3,19 +3,29 @@ Celeryproject website
 
 The official Celery Project website 
 
-**Required Django apps**
+#### Required Django apps ####
 - sorl-thumbnail
 
-**Extra python packages**
-- python-memcached
+### How to run celeryproject in local ###
 
-Rename settings.py.sample in settings.py and change DB parameters to fit your
-local db configuration and also the memcache ones, used by sorl-thumbnail
-library.
+The project contains a requirements.txt file, so it's enough that you create a virtual env and you install the requirements using pip
 
-Than is just a Django website so run the syncdb command and everything should
-works fine.
+```
+pip install -r requirements.txt
+```
 
-**Production server configuration**
- - **Os**: Debian 6
- - **Db**: MySQL
+After that make sure to create a dev.py file in the settings folder, you can use as template the dev.py.sample, and just fill in your local database settings.
+Once done you can run the Django syncdb command and feel free to create an admin user.
+
+```
+python manage.py syncdb
+```
+
+Once this is done the website is ready to run, but if you want some content coming from the celeryproject website you can load the sample data from the fixtures by running:
+
+```
+python manage.py loaddata sampledata.json
+```
+
+Feel free to contribute or propose new features/content for the website.
+

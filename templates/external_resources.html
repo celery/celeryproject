@@ -1,0 +1,42 @@
+{%extends "base.html" %}
+{%block title%}External Resources{%endblock%}
+{% block extrascripts %}
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getHTMLBlock("#stackoverflow", "/ajax/stackoverflowquestions/10/1/");
+    });
+  </script>
+{% endblock %}
+{%block content%}
+  <h1>Community Links</h1>
+  {% include "common/share.html" %}
+  <div style="float: left; width: 65%;">
+    <div class="list">
+    {%for link in links.object_list %}
+        <h3><a href="{{link.url}}" title="{{link.title|striptags|escape}}">{{link.title}}</a></h3>
+        <span class="meta">Author: {{link.author}} | Content type: {{link.content_type}}</span>
+      
+    {% endfor %}
+    </div>
+    {% include "common/paginator.html" with paginator=links %}
+    <div class="clear"></div>
+  </div>
+  <div style="float: right; width: 30%;">
+    <h3>Resources</h3>
+    <p>
+      <a href="http://blog.gmane.org/gmane.comp.python.amqp.celery.user">
+        - Celery-users mailing list archive
+      </a>
+    </p>
+    <p>
+      <a href="http://botland.oebfare.com/logger/celery/">
+        - IRC Logs for the #celery channel
+      </a>
+    </p>    
+    <h3>Stack overflow</h3>
+    <div id="stackoverflow">
+      
+    </div>
+  </div>
+  <div class="clear"></div>
+{%endblock%}  

@@ -1,0 +1,57 @@
+{%extends "base.html" %}
+{% load url from future %}
+{% load i18n %}
+{%block title%}Homepage{%endblock%}
+{% block extrascripts %}
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getHTMLBlock("#package_info", "/ajax/packageinfo/");
+    });
+  </script>
+{% endblock %}
+{%block content-container%}
+<div id="splash">
+  <div class="container">
+    <h1><b>Celery</b>: Distributed Task Queue</h1>
+    <p><p>Celery is an asynchronous task queue/job queue based on distributed message passing.	It is focused on real-time operation, but supports scheduling as well.</p><p>The execution units, called tasks, are executed concurrently on a single or more worker servers using multiprocessing, <a href="http://eventlet.net" target="_blank">Eventlet</a>,	or <a href="http://gevent.org" target="_blank">gevent</a>. Tasks can execute asynchronously (in the background) or synchronously (wait until ready).</p><p><b>Celery is used in production systems to process millions of tasks a day.</b></p></p>
+   </div>
+  </div>
+<div id="content" class="container content" style="padding-bottom: 0px;">
+    <div id="lastnews">
+      <ul>
+        {%for news in latest_news%}
+        <li>
+          <h2><b><a href="{{news.permalink}}">{{news.title}}</a></b></h2>
+          <span> on {{news.creation_date}}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      <a href="{% url 'news' None %}">Read all news</a>
+    </div>
+    <div id="package_info">
+
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="content" class="container content">
+  <div id="getStarted" class="contentbox">
+    <h2>Getting started</h2> 
+    <ol class="list"> <li>Install celery by download or <code>pip install -U Celery</code></li> <li> Set up <a href="http://docs.celeryproject.org/en/latest/getting-started/brokers/rabbitmq.html">RabbitMQ</a>, <a href="http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html">Redis</a> or one of the other <a href="http://docs.celeryproject.org/en/latest/getting-started/brokers/">supported brokers</a> </li> <li>Select one of the following guides:  <ol>   <li><a href="http://docs.celeryproject.org/en/latest/getting-started/first-steps-with-celery.html">First steps with Python</a></li>   <li><a href="http://docs.celeryproject.org/en/latest/django/index.html">First steps with Django</a></li>  </ol> </li></ol>
+  </div>
+  <div class="contentbox">
+    <h2>Easy to integrate</h2> 
+    <p>Celery is easy to integrate with web frameworks, some of which even have <a href="http://docs.celeryproject.org/en/latest/getting-started/introduction.html#framework-integration">integration packages</a>.</p><p>Celery is written in Python, but the protocol can be implemented in any language. It can also <a href="http://docs.celeryproject.org/en/latest/userguide/remote-tasks.html">operate with other languages</a> using webhooks.</p> 
+  </div>
+  <div class="contentbox">
+    <h2>Multi broker support</h2> 
+    <p>The recommended message broker is <a href="http://rabbitmq.com/">RabbitMQ</a>, but support for <a href="http://redis.io/">Redis</a>, <a href="http://kr.github.com/beanstalkd/">Beanstalk</a>, <a href="http://www.mongodb.org/">MongoDB</a>, <a href="http://couchdb.apache.org/">CouchDB</a>, and databases (using <a href="http://www.sqlalchemy.org/">SQLAlchemy</a> or the <a href="http://djangoproject.com">Django ORM</a>) is also available.</p> 
+  </div>
+</div>
+<div id="who" class="container content">
+    <h1>Who is using celery</h1>
+        <img src="{{ STATIC_URL }}img/instagram_logo.png">
+        <img src="{{ STATIC_URL }}img/mozilla_logo.png">
+        <img src="{{ STATIC_URL }}img/adroll_logo.png">
+    <div class="clear"></div>
+</div>
+{%endblock%}
