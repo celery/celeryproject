@@ -29,7 +29,7 @@
 <body>
     <div id="nav">
         <ul class="container">
-            <li id="home"><a href="/"><img src="{{STATIC_URL}}/img/logo.png" alt="Celery home"></a></li>
+            <li id="home"><a href="/"><img src="{{STATIC_URL}}img/logo.png" alt="Celery home"></a></li>
             {% for page in ext_flatpages %}
             <li><a href="{{ page.url }}">{{ page.menu_label }}</a></li>
             {% endfor %}
