@@ -75,7 +75,10 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = os.environ['CELERYPROJECT_SECRET_KEY']
+try:
+    SECRET_KEY = os.environ['CELERYPROJECT_SECRET_KEY']
+except KeyError:
+    pass
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
