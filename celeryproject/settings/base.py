@@ -1,4 +1,5 @@
 # Django settings for celeryproject project.
+import os
 from os.path import abspath, dirname, join, normpath
 
 PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
@@ -8,6 +9,8 @@ ADMINS = (
 )
 
 MANAGERS = ADMINS
+
+ALLOWED_HOSTS = ['www.celeryproject.org']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -72,7 +75,10 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'vkr!-(b^(jb@_t5a#6#i_-bupin-@xkc7#_zl2wwi52zayvqhc'
+try:
+    SECRET_KEY = os.environ['CELERYPROJECT_SECRET_KEY']
+except KeyError:
+    pass
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (

@@ -72,6 +72,7 @@ h2 {
     font-size:  1.2em;
     color:  #000;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .contentbox {
@@ -420,4 +421,20 @@ cite {
 
 #who img{
     margin: 0px 5px 0px 5px;
+}
+
+#third-parties h1{
+    padding-bottom: 20px;
+
+}
+
+#third-parties .contentbox {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 340px;
+}
+
+#third-parties .contentbox p{
+    font-size: 12px;
 }
