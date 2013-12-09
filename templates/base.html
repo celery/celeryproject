@@ -33,7 +33,7 @@
             {% for page in ext_flatpages %}
             <li><a href="{{ page.url }}">{{ page.menu_label }}</a></li>
             {% endfor %}
-            <li><a href="{% url 'tutorials' None %}">TUTORIALS</a></li>
+            <li><a href="{% url 'tutorials' %}">TUTORIALS</a></li>
             <li><a href="{% url 'external_resources' %}">COMMUNITY</a></li>
             <li><a href="https://github.com/celery/celery">SOURCECODE</a></li>
         </ul>

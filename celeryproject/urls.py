@@ -6,9 +6,11 @@ from django.conf.urls import patterns, include, url
 admin.autodiscover()
 
 urlpatterns = patterns('celeryweb.views',
-                       url(r'^news/(?P<slug>[\w-]*)', 'news', name='news'),
-                       url(r'^tutorials/(?P<slug>[\w-]*)', 'tutorials', name='tutorials'),
-                       url(r'^community/', 'community', name='external_resources'),
+                       url(r'^news/$', 'news', name='news'),
+                       url(r'^news/(?P<slug>[\w-]*)', 'news', name='news_entry'),
+                       url(r'^tutorials/$', 'tutorials', name='tutorials'),
+                       url(r'^tutorials/(?P<slug>[\w-]*)', 'tutorials', name='tutorial'),
+                       url(r'^community/$', 'community', name='external_resources'),
                        url(r'^profile/(?P<username>.+)/', 'user_profile', name='user_profile'),
 
                        #AJAX
