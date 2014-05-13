@@ -92,8 +92,8 @@ def user_profile(request, username):
 
 def stackoverflow_questions(request, page_size=10, page=1):
     opener = urllib2.build_opener()
-    request_url = urllib2.Request(("http://api.stackoverflow.com/1.1/"
-                                   "search?tagged=celery"
+    request_url = urllib2.Request(("http://api.stackexchange.com/2.2/"
+                                   "search?tagged=celery&order=desc&sort=creation&site=stackoverflow"
                                    "&page=%s&pagesize=%s") % (page, page_size),
                                   None,
                                   headers={'Accept-Encoding': 'gzip, identity'})
