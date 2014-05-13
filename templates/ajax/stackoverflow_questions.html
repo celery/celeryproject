@@ -1,8 +1,8 @@
 <ul class="small_list">
-{%for question in jsondata.questions%}
+{%for question in jsondata.items%}
 	<li>
 		<div class="title">
-			<a target="_blank" href="http://stackoverflow.com{{question.question_timeline_url}}">
+			<a target="_blank" href="{{question.link}}">
 				{{question.title}}
 			</a>
 		</div>
