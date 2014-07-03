@@ -100,7 +100,7 @@ def stackoverflow_questions(request, page_size=10, page=1):
     gzipped = opener.open(request_url)
     compressed_stream = StringIO.StringIO(gzipped.read())
     gzipped.close()
-    jsondata = json.load(gzip.GzipFile(fileobj=compressed_stream))
+    jsondata = json.loads(gzip.GzipFile(fileobj=compressed_stream).read().decode('utf-8-sig'))
     return render_to_response('ajax/stackoverflow_questions.html',
                               {'jsondata': jsondata},
                               context_instance=RequestContext(request))
