@@ -139,7 +139,7 @@
     "fields": {
       "author": "django-better-cache", 
       "title": "Using Celery with django-better-cache", 
-      "url": "http://django-better-cache.readthedocs.org/en/latest/middleware.html", 
+      "url": "https://django-better-cache.readthedocs.io/en/latest/middleware.html", 
       "creator": "asksol", 
       "creation_date": "2012-07-29T22:48:03Z", 
       "visible": true, 
@@ -153,7 +153,7 @@
     "fields": {
       "author": "django-better-cache", 
       "title": "Using Celery with django-better-cache", 
-      "url": "http://django-better-cache.readthedocs.org/en/latest/middleware.html", 
+      "url": "https://django-better-cache.readthedocs.io/en/latest/middleware.html", 
       "creator": "asksol", 
       "creation_date": "2012-07-29T22:48:03Z", 
       "visible": true, 
