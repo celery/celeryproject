@@ -7,6 +7,8 @@ from django.template import RequestContext
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
+from django.contrib.syndication.views import Feed
+from django.urls import reverse
 
 from .models import News, Tutorial, CommunityLink
 
@@ -140,3 +142,21 @@ def package_info(request):
         'ajax/celery_package_info.html',
         package_info_context,
     )
+
+class NewsFeed(Feed):
+    title = "News | Celery: Distributed Task Queue"
+    link = "/sitenews/"
+    description = "News"
+
+    def items(self):
+        return News.objects.order_by('-pub_date')[:5]
+
+    def item_title(self, item):
+        return item.title
+
+    def item_description(self, item):
+        return item.text
+
+    # item_link is only needed if NewsItem has no get_absolute_url method.
+    def item_link(self, item):
+        return reverse('news_entry', args=[item.slug])

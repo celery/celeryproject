@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 from django.contrib.flatpages.models import FlatPage
 from django.utils.translation import ugettext_lazy as _
 
-
 class TrackingModel(models.Model):
     creator = models.CharField(verbose_name=_("_creator"),
                                max_length=255,
@@ -103,7 +102,6 @@ class News(TrackingModel):
 
     def permalink(self):
         return "/news/%s/" % self.slug
-
 
 class Tutorial(TrackingModel):
     title = models.CharField(verbose_name=_("_title"), max_length=255)

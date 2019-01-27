@@ -6,6 +6,7 @@ from celeryweb import views
 
 urlpatterns = [url(r'^news/$', views.news, name='news'),
                url(r'^news/(?P<slug>[\w-]*)', views.news, name='news_entry'),
+               url(r'^news/feed/$', views.NewsFeed(), name='news_feed'),
                url(r'^tutorials/$', views.tutorials, name='tutorials'),
                url(r'^tutorials/(?P<slug>[\w-]*)',
                    views.tutorials, name='tutorial'),
