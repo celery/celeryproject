@@ -1,6 +1,8 @@
 {%extends "base.html" %}
 {% load url from future %}
 {%block title%}News{%endblock%}
+<link rel="alternate" type="application/rss+xml"
+  href="{% site_url %}/news/feed" title="Celery Project News">
 {%block content%}
   <h1>News</h1>
   <div class="list">
