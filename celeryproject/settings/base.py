@@ -5,7 +5,7 @@ from os.path import abspath, dirname, join, normpath
 PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
 
 ADMINS = (
-    ('Mauro Rocco', 'fireantology@gmail.com'),
+    ('Asif Saif Uddin', 'auvipy@gmail.com'),
 )
 
 MANAGERS = ADMINS
