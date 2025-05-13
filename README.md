@@ -3,6 +3,8 @@ Celeryproject website
 
 The official Celery Project website 
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/celery/celeryproject)
+
 #### Required Django apps ####
 - sorl-thumbnail
 
